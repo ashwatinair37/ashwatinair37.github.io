@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ashwati Nair's Portfolio</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experiance</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <h1>Weclome!<br>I'm Ashwati Nair</br></h1>
+        <p>Business Analytics and Information Technology Student</p>
+      </div>
+    </div>
+  </div>
+  <!-- about page -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/me.jpg">
+        </div>
+        <div class="about-col-2">
+          <h2 class="subtitle">About Me</h2>
+          <p>Hi, my name is Ashwati Nair. I am a senior studying Business Analytics & Information Technology. I currently serve as a fundraising chair for the Rutgers Climbing Club. I have a passion for helping others. I have developed strong organizational and planning skills through coordinating and executing events.
+            One of my favorite classes I've taken has been Business Data Mangement where I got to learn about SQL and databases. I am interested in helping others and learning about how to apply my skills to roles within the industry of Customer Care. 
+            <br></br>
+            Aside from my academic and career goals, I also love to get outside the box both literally and figuratively. I like to go outdoors whenever I can. Rutgers has some great hiking spots around
+            the area. This season's fall foliage has been exceptional and seeing all the pretty fall colors makes the lower temperatures worth it.   
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- experience page -->
+  <div id="experience">
+    <div class="container">
+      <div class="row">
+        <div class="experience-col-1">
+          <img src="images/pseg.jpg">
+        </div>
+        <div class="experience-col-2">
+          <h2 class="subtitle">Experience</h2>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('Customer Associate')">Customer Associate</p>
+            <p class="tab-links" onclick="opentab('Fundraising Chair')">Fundraising Chair</p>
+            <p class="tab-links" onclick="opentab('Workforce Management Intern')">Workforce Management Intern</p>
+            <p class="tab-links" onclick="opentab('MIS Tutor')">MIS Tutor</p>
+          </div>
+          <div class="tab-contents active-tab" id="Customer Associate">
+            <ul>
+              <li><span>Jun 2021-Aug 2021</span><br></li>
+              <li><span>TJ Maxx Customer Associate</span><br>I registered sales of merchandise with positive customer satisfaction. I
+                routinely managed cash register and processed various transactions. I managed fitting room for dozens of customers and maintained order.</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="Fundraising Chair">
+            <ul>
+              <li><span>Feb 2023-Present</span><br></li>
+              <li><span>Rutgers Rock Climbing Club Fundraising Chair</span><br>I generated funds from organized bake sales and restaurant collabs supporting over 50 members. I updated Excel spreadsheets to meticulously list and organize all transaction data.</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="Workforce Management Intern">
+            <ul>
+              <li><span>Jun 2024-Present</span><br></li>
+              <li><span>PSEG Workforce Management Intern</span><br>I supported call center performance by tracking rep call activity from CXone and Webstation reporting.
+                I improved customer experience by optimizing agent utilization through identifying shrinkage with Excel.
+                I performed audits of seniority dates of reps for the union to ensure accurate shift selection</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="MIS Tutor">
+            <ul>
+              <li><span>Sep 2024-Present</span><br></li>
+              <li><span>Knack MIS Tutor</span><br>I utilzed my knowledge form taking Management Information Systems previously.
+              I help undergraduate students currently taking the class with the course material which includes 
+              basic SQL and Excel. I used different tutoring strategies based on the learning sytle of the student.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!--Hobbies-->
+  <div id="hobbies">
+    <div class="container">
+      <div class="hobbies">
+        <h1 class="sub-title">Hobbies & Interests</h1>
+        <div class="pictures">
+          <figure>
+          <img src="images/hiking.jpg">
+          <figcaption> Hiking the Black Canyon of the Gunnison!
+          </figcaption>
+          </figure>
+          <figure>
+          <img src="images/climbingpic.jpg">
+          <figcaption>Climbing in Red River Gorge, Kentucky!</figcaption>
+          </figure>
+          <figure>
+          <img src="images/book.jpg">
+          <figcaption>I also love to read books!</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Contact Info-->
+<div id="contact">
+  <div class="container">
+    <div class="contact">
+      <h3 class="sub-title">Contact Links</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/ashwati.nairr/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/ashwatinair37/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/ashwatinair37"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+
+</body>
+</html>
