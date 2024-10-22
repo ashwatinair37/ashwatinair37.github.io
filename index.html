@@ -11,13 +11,15 @@
   <div id="header">
     <div class="container">
       <nav>
-        <ul>
+        <ul id="sidemenu">
           <li><a href="#header">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experiance</a></li>
           <li><a href="#hobbies">Hobbies</a></li>
           <li><a href="#contact">Contact</a></li>
+          <i class="fas fa-times" onclick="closemenu()"></i>
         </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
       </nav>
       <div class="header-text">
         <h1>Weclome!<br>I'm Ashwati Nair</br></h1>
@@ -100,16 +102,16 @@
         <div class="pictures">
           <figure>
           <img src="images/hiking.jpg">
-          <figcaption> Hiking the Black Canyon of the Gunnison!
+          <figcaption> Hiking the Black Canyon of the <a href="https://www.nps.gov/blca/index.htm" target="_blank">Gunnison</a>!
           </figcaption>
           </figure>
           <figure>
           <img src="images/climbingpic.jpg">
-          <figcaption>Climbing in Red River Gorge, Kentucky!</figcaption>
+          <figcaption>Climbing in <a href="https://www.redrivergorge.com/things-to-do/climbing/" target="_blank">Red River Gorge</a>, Kentucky!</figcaption>
           </figure>
           <figure>
           <img src="images/book.jpg">
-          <figcaption>I also love to read books!</figcaption>
+          <figcaption>I also love to read <a href="https://www.strandbooks.com/" target="_blank">books</a>!</figcaption>
           </figure>
         </div>
       </div>
@@ -141,6 +143,16 @@
       }
       event.currentTarget.classList.add("active-link");
       document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+
+  <script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+      sidemenu.style.right="0";
+    }
+    function closemenu(){
+      sidemenu.style.right="-200px";
     }
   </script>
 
